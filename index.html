@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="./asset/react.svg" />
+    <link rel="stylesheet" href="./styles/homePage.css">
+    <title>To-Do-List</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-icon-left">
+            <i class="fa-solid fa-user" title="Profile"></i>
+            <i class="fa-solid fa-bell" title="Notifications"></i>
+            <i class="fa-solid fa-gear" title="Settings"></i>
+        </div>   
+        <h2 class="header-text">Welcome to your To-do list</h2>
+        <div class="header-icon-right">
+            <i class="fa-solid fa-moon dark-mode" title="Dark Mode"></i>
+            <i class="fa-solid fa-sun light-mode" title="Light Mode"></i>
+            <i class="fa-solid fa-right-from-bracket" title="Logout"></i>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Main Task Navigation -->
+        <div class="task-box" id="task-boxs">
+            <a href="./htmlFolder/daily.html">
+            <button class="task-btn">
+                <i class="fa-solid fa-calendar-day"></i>
+                <span>Daily Tasks</span>
+            </button>
+        </a>
+        <a href="./htmlFolder/weekly.html">
+            <button class="task-btn">
+                <i class="fa-solid fa-calendar-week"></i>
+                <span>Weekly Tasks</span>
+            </button>
+        </a>
+        <a href="./htmlFolder/monthly.html">
+            <button class="task-btn" href="">
+                <i class="fa-solid fa-calendar"></i>
+                <span>Monthly Tasks</span>
+            </button>
+        </a>
+            <a href="./htmlFolder/yearly.html">
+            <button class="task-btn">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Yearly Goals</span>
+            </button>
+        </a>
+        <a href="./Htmlfolder2/completedPage.html">
+            <button class="task-btn">
+                <i class="fa-solid fa-check-double"></i>
+                <span>Completed Tasks</span>
+            </button>
+        </a>
+        </div>
+
+        <!-- Quick Stats Section -->
+        <div class="stats-container">
+            <a href="./Htmlfolder2/pendingPage.html" target="_blank" rel="noopener noreferrer">
+            <div class="stat-card" tabindex="0" style="cursor: pointer;">
+                <i class="fa-solid fa-tasks"></i>
+                <h3>Pending Tasks</h3>
+                <p class="count pending-task" id="pending-task"></p>
+            </div>
+            </a>
+            
+            <a href="./Htmlfolder2/completedPage.html" target="_blank" rel="noopener noreferrer">
+            <div class="stat-card">
+                <i class="fa-solid fa-check-circle"></i>
+                <h3>Completed Today</h3>
+                <p class="count" id="completed-task"></p>
+            </div>
+            </a>
+
+            <div class="stat-card">
+                <i class="fa-solid fa-fire"></i>
+                <h3>Current Streak</h3>
+                <p class="count" id="streak">7 days</p>
+            </div>
+        </div>
+
+        <!-- Upcoming Deadlines -->
+        <div class="deadlines-section">
+            <h3><i class="fa-solid fa-clock"></i> Upcoming Deadlines</h3>
+            <ul class="deadlines-list">
+                <li>
+                    <span class="deadline-date">Tomorrow</span>
+                    <span class="deadline-task">Project Presentation</span>
+                    <span class="deadline-time">10:00 AM</span>
+                </li>
+                <li>
+                    <span class="deadline-date">Fri, Jun 2</span>
+                    <span class="deadline-task">Team Meeting</span>
+                    <span class="deadline-time">2:30 PM</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Quick Add Section -->
+        <div class="quick-add">
+            <h3><i class="fa-solid fa-plus"></i> Add Quick Task</h3>
+            <div class="add-input">
+                <input type="text" placeholder="What needs to be done?">
+                <button class="add-btn"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+
+        <!-- Motivational Quote -->
+        <div class="motivation">
+            <blockquote>
+                "Productivity is never an accident. It is always the result of a commitment to excellence, 
+                intelligent planning, and focused effort."
+            </blockquote>
+            <p>- Paul J. Meyer</p>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="./index.html" class="nav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-list-check"></i>
+            <span>Tasks</span>
+        </a>
+        <a href="./Htmlfolder2/Analytics.html" class="nav-item">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Analytics</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-bookmark"></i>
+            <span>Categories</span>
+        </a>
+    </nav>
+</body>
+<script type="module" src="../jsFiles/homePage.js"></script>
+</html>

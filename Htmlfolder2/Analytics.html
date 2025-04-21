@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="../asset/react.svg" />
+    <link rel="stylesheet" href="../styles/analytics.css">
+    <title>Task Statistics</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-icon-right">
+            <a href="../index.html" class="homeLink">
+                <i class="fas fa-home home" title="home"></i>
+              </a>
+            <i class="fa-solid fa-moon dark-mode" title="Dark Mode"></i>
+            <i class="fa-solid fa-sun light-mode" title="Light Mode"></i>
+        </div>
+        <h1>Task Statistics</h1>
+    </header>
+    
+    <div class="stats-container">
+        <div class="stat-box pending-box">
+            <h2>Pending Tasks</h2>
+            <div class="stat-number" id="pending-count">0</div>
+            <p>Tasks waiting to be completed</p>
+        </div>
+        
+        <div class="stat-box completed-box">
+            <h2>Completed Tasks</h2>
+            <div class="stat-number" id="completed-count">0</div>
+            <p>Tasks you've finished</p>
+        </div>
+    </div>
+
+    <div class="task-list" id="tasks-breakdown">
+        <!-- Task breakdown will be inserted here by JavaScript -->
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="../index.html" class="nav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-list-check"></i>
+            <span>Tasks</span>
+        </a>
+        <a href="./Analytics.html" class="nav-item">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Analytics</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-bookmark"></i>
+            <span>Categories</span>
+        </a>
+    </nav>
+
+    <script src="../jsfiles2/task-Status.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    margin-top: -1.48rem;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    margin-inline: -30px;
+}
+.header-icon-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.homeLink{
+    color: white;
+    font-size: 1.2rem;
+}
+.header-icon-right i {
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.header-icon-right i:hover {
+    transform: scale(1.1);
+}
+/* Add to your header.css */
+.header-icon-right .dark-mode,
+.header-icon-right .light-mode {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.header-icon-right .dark-mode:hover,
+.header-icon-right .light-mode:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Hide light mode by default */
+.header-icon-right .light-mode {
+    display: none;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .input input {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+body.dark-mode .list li {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
+
+body.dark-mode .list li[style*="line-through"] {
+    background-color: #252525;
+    color: #888;
+}
+
+body.dark-mode .modal {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
+
+body.dark-mode .cancel {
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+/* Switch icon visibility in dark mode */
+body.dark-mode .header-icon-right .dark-mode {
+    display: none;
+}
+
+body.dark-mode .header-icon-right .light-mode {
+    display: block;
+}
+.header-button{
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #4CAF50; /* Changed to match homepage green */
+    color: white;
+    padding: 8px 15px; /* Slightly more vertical padding */
+    width: 100px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.header-button:hover{
+    animation: shake 0.4s ease-in-out;
+    transform: scale(1.05);
+}
+.header-button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.type{
+    display: none;
+}
+.menu-button{
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+    display: none;
+}
+.nav{
+    border: 1px solid limegreen;
+    border-radius: .5rem;
+    padding: .9rem 1.5rem;
+    display: none;
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    font-weight: 600;
+}
+.nav-list li:hover{
+    background-color: white;
+}
+.nav-list li a{
+    text-decoration: none;
+    color: white;
+    padding: .8rem 1rem;
+}
+.nav-list li a:hover{
+    text-decoration: underline;
+    color: black;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+  }
+
+@media (max-width:500px){
+    .header{
+        position: relative;
+    }
+    .header-button{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+    .nav{
+        background-color: rgb(159, 33, 190);
+        color: black;
+        border: 1px solid limegreen;
+        padding: .9rem 1.5rem;
+        display: none;
+        position: absolute;
+        bottom: -110px;
+        right: 30px;
+
+
+    }
+    .nav-list{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        font-weight: 600;
+    }
+    .nav-list li:hover{
+        background-color: white;
+    }
+}

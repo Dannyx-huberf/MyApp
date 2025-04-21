@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="../asset/react.svg" />
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <title>To-Do List</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-icon-right">
+            <a href="../index.html" class="homeLink">
+                <i class="fas fa-home home" title="home"></i>
+              </a>
+            <i class="fa-solid fa-moon dark-mode" title="Dark Mode"></i>
+            <i class="fa-solid fa-sun light-mode" title="Light Mode"></i>
+        </div>
+        <h2 class="header-text">Weekly To do List</h2>
+        <button class="header-button" title="what type do you need" id="header-btn">Type</button>
+        <button class="menu-button" id="menu-btn" title="menu">☰</button>
+        <nav class="nav" id="nav">
+            <ul class="nav-list">
+                <li><a href="./index.html">Daily</a></li>
+                <li><a href="./monthly.html">Monthly</a></li>
+                <li><a href="./yearly.html">Yearly</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">  
+        <div class="main">
+            <div class="input">
+                <input type="text" id="input" placeholder="Add a new task..." />
+                <button id="addBtn">Add</button>
+                <button id="clearBtn" class="clear">Clear</button>
+            </div>
+            <div class="task-list">
+                <ul class="list"></ul>
+            </div>
+        </div>
+    </div>
+    <nav class="bottom-nav">
+        <a href="../index.html" class="nav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-list-check"></i>
+            <span>Tasks</span>
+        </a>
+        <a href="../Htmlfolder2/Analytics.html" class="nav-item">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Analytics</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-bookmark"></i>
+            <span>Categories</span>
+        </a>
+    </nav>
+    <div class="modal-container" id="modal_container">
+        <div class="modal">
+            <p class="modal-text">Are you sure you want to delete all tasks?</p>
+            <div class="modal-btns">
+                <button id="cancelBtn" class="cancel">Cancel</button>
+                <button id="confirmBtn" class="confirm">Confirm</button>
+        </div>
+    </div>
+    <script src="../jsFiles/weekly.js" type="module"></script>type="module"></script>
+</body>
+</html>
